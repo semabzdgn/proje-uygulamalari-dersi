@@ -1,0 +1,88 @@
+{% extends "taslak.html" %}
+
+{% block baslik %}
+Profil Sayfası
+{% endblock %}
+
+{% block icerik %}
+<div>
+    <h2>Kullanıcı Bilgileri</h2>
+    <p><strong>Kullanıcı Adı:</strong> {{ kullanici_bilgileri[0] }}</p>
+    
+</div>
+
+<div>
+    <h2>Ekim Bilgileri</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seç</th>
+                <th>Ekim Tarihi</th>
+                <th>Ürün Adı</th>
+                <th>Ekilen Alan (m2)</th>
+                <th>Ekim Yapılan İl/İlçe</th>
+                <th>Tohum Miktarı(kg)</th>
+                <th>Gübreleme Tarihi</th>
+                <th>Hasat Tarihi</th>
+                <th>Hasat Edilen Ürün Miktarı (kg)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ekim in ekim_bilgileri %}
+            <tr>
+                <td><input type="checkbox" name="secilen_ekimler" value="{{ ekim[0] }}"></td>
+                <td>{{ ekim[1] }}</td>
+                <td>{{ ekim[2] }}</td>
+                <td>{{ ekim[3] }}</td>
+                <td>{{ ekim[4] }}</td>
+                <td>{{ ekim[5] }}</td>
+                <td>{{ ekim[6] }}</td>
+                <td>{{ ekim[7] }}</td>
+                <td>{{ ekim[8] }}</td>
+                <td>
+                    <form action="/ekim_sil/{{ ekim[0] }}" method="POST">
+                        <button type="submit">Sil</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/ekim_guncelle/{{ ekim[0] }}" method="GET">
+                        <button type="submit">Güncelle</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <h2>Yeni Ekim Bilgisi Ekle</h2>
+    <form action="/ekim_ekle" method="POST">
+        <table>
+            <tr>
+                <th>Ekim Tarihi</th>
+                <th>Ürün Adı</th>
+                <th>Ekilen Alan (m2)</th>
+                <th>Ekim Yapılan İl/İlçe</th>
+                <th>Tohum Miktarı(kg)</th>
+                <th>Gübreleme Tarihi</th>
+                <th>Hasat Tarihi</th>
+                <th>Hasat Edilen Ürün Miktarı (kg)</th>
+            </tr>
+            <tr>
+                <td><input type="date" name="ekim_tarihi" required></td>
+                <td><input type="text" name="urun_adi" required></td>
+                <td><input type="number" name="ekilen_alan"  required></td>
+                <td><input type="text" name="il_ilce" required></td>
+                <td><input type="number" name="urun_miktari"  required></td>
+                <td><input type="date" name="gubreleme_tarihi"></td>
+                <td><input type="date" name="hasat_tarihi"></td>
+                <td><input type="number" name="hasat_miktari" ></td>
+            </tr>
+        </table>
+        <button type="submit">Ekle</button>
+        
+    </form>
+</div>
+
+{% endblock %}

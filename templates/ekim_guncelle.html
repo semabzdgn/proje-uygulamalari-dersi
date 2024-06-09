@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekim Bilgisi Güncelle</title>
+    <link rel="stylesheet" href="/static/css/guncelle.css">
+</head>
+<body>
+    <h2>Ekim Bilgisi Güncelle</h2>
+    <form action="/ekim_guncelle/{{ ekim[0] }}" method="POST">
+        <label for="ekim_tarihi">Ekim Tarihi:</label>
+        <input type="date" name="ekim_tarihi" value="{{ ekim.ekim_tarihi }}" required><br>
+
+        <label for="urun_adi">Ürün Adı:</label>
+        <input type="text" name="urun_adi" value="{{ ekim.urun_adi }}" required><br>
+
+        <label for="ekilen_alan">Ekilen Alan (m2):</label>
+        <input type="number" name="ekilen_alan" value="{{ ekim.ekilen_alan }}" required><br>
+
+        <label for="il_ilce">Ekim Yapılan İl/İlçe:</label>
+        <input type="text" name="il_ilce" value="{{ ekim.il_ilce }}" required><br>
+
+        <label for="urun_miktari">Tohum Miktarı (kg):</label>
+        <input type="number" name="urun_miktari" value="{{ ekim.urun_miktari }}" required><br>
+
+        <label for="gubreleme_tarihi">Gübreleme Tarihi:</label>
+        <input type="date" name="gubreleme_tarihi" value="{{ ekim.gubreleme_tarihi }}"><br>
+
+        <label for="hasat_tarihi">Hasat Tarihi:</label>
+        <input type="date" name="hasat_tarihi" value="{{ ekim.hasat_tarihi }}"><br>
+
+        <label for="hasat_miktari">Hasat Edilen Ürün Miktarı (kg):</label>
+        <input type="number" name="hasat_miktari" value="{{ ekim.hasat_miktari }}"><br>
+
+        <button type="submit">Güncelle</button>
+    </form>
+</body>
+</html>

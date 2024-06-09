@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+    <div>
+        <h1>Eylül Ayı Takvimi</h1>
+        <h2>SEBZECİLİK</h2>
+        <p>Sebzecilik: Yazlık sebzelerden boşalan yerlerde toprak işlemesi yapılır. Kışlık sebzelerden pırasa, lahana hasadı başlar, Fidelikte yetiştirilen marul fideleri tarlaya aktarılır. Beyaz sinek, yaprak biti, kırmızı örümcek, külleme, yalancı mildiyö ile mücadele edilir.</p>
+
+        <h2>MEYVECİLİK</h2>
+        <p>Toprak işleme, ekim- dikim hazırlığı yapılır.</p>
+        <p>Fidan sökümü, hendekleme, dağıtımı yapılır.</p>
+        <p>Zeytin, bağ, sert ve yumuşak meyve türlerinde zararlı etmenler takip edilir.</p>
+        <p>Sulama işleri devam eder.</p>
+
+        <h2>HUBUBAT</h2>
+        <p>Hububat: Tahıl ekimi yapılacak olan tarlanın sürülüp ekime hazır duruma getirilmeli tohum ve gübre temini yapılmalıdır.</p>
+        <p>I. ve II. Ürün Mısır: Ana ürün olarak ekilen mısırın hasadına devam edilir ve tamamlanır. Eylül ayı başlarında geç ekilen 2. Ürünün son suyu verilir. Koçan kurdu ve mısır kurdu ve Yeşil kurt mücadelesi yapılır.</p>
+
+        <h2>ÇAYIR-MERA VE YEM BİTKİLERİ</h2>
+        <p>2. Ürün Silajlık hasadı yapılır.</p>
+        <p>Tek yıllık yem bitkilerinin ekimi için toprak hazırlığı yapılır.</p>
+
+        <h2>TURUNÇGİL</h2>
+        <p>Zararlı (Harnup güvesi, Koşniller ve Akarlar) mücadelesi yapılır.</p>
+        <p>Akdeniz Meyve Sineği kontrolü yapılır, gerekiyorsa mücadele edilir.</p>
+        <p>Kimyasal yolla ot mücadelesine devam edilir.</p>
+        <p>Minneola Tanjelo'nun Alternaria hastalığı gözlemleri ve mücadelesi yapılır.</p>
+    </div>
+</body>
+</html>

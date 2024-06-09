@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitki Uyumluluğu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <section>
+        <h2>Bitki ve Ara Bağlantı Seçimi</h2>
+        <form method="POST">
+            <label for="bitki">Bitki Seçiniz:</label>
+            <select id="bitki" name="bitki">
+                {% for bitki in bitki_secenekleri %}
+                <option value="{{ bitki }}">{{ bitki }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="ara_baglanti">Ara Bağlantı Seçiniz:</label>
+            <select id="ara_baglanti" name="ara_baglanti">
+                {% for ara_baglanti in ara_baglanti_secenekleri %}
+                <option value="{{ ara_baglanti }}">{{ ara_baglanti }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <button type="submit">Gönder</button>
+        </form>
+
+        {% if sonuclar %}
+        <h3>Sonuçlar:</h3>
+        <ul>
+            {% for sonuc in sonuclar %}
+            <li>{{ sonuc }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </section>
+
+    <footer>
+        <p>Telif Hakkı © 2024 Bitki Danışmanı</p>
+    </footer>
+</body>
+</html>

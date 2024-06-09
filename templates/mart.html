@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mart Ayı Tarım Takvimi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+
+    <div>
+        <h1>Mart Ayı Takvimi</h1>
+        <h2>SEBZECİLİK</h2>
+        <p>Açık tarla yetiştiriciliği için toprak gübrelenerek sürülmeli, ay sonuna doğru domates, biber, patlıcan fideleri tarlaya aktarılmalıdır.</p>
+        <p>Kışlık sebzelerin hasadına devam edilir.</p>
+        <p>Bezelye, bakla, soğan, fasulye, bamya tohumları ekilir.</p>
+        <p>Fide kök çürüklüğü, köşeli yaprak leke hastalığı ve toprak altı zararlılarına karşı mücadele yapılır.</p>
+
+        <h2>SERACILIK</h2>
+        <p>Turfanda karpuz yetiştiriciliği için hazırlanan plastik örtülü tünellere daha önceden yetiştirilen fideler dikilir.</p>
+        <p>Azotlu gübrenin yarısı ile fosforlu ve potaslı gübrenin tamamı verilir.</p>
+        <p>Sulama yapılır.</p>
+        <p>Bu ayda olacak ilkbaharın geç donlarından korunmak için gerekli önlemler alınır.</p>
+        <p>Kabak, biber ve salatalık hasadına başlanır.</p>
+        <p>Fide kök çürüklüğü, köşeli yaprak leke hastalığı ve toprak altı zararlıları ile mücadele edilir.</p>
+
+        <h2>MEYVECİLİK</h2>
+        <p>İklim ve türe özgü analize dayalı gübreleme ve budama işlemleri tamamlanır.</p>
+        <p>Zeytin bahçelerinde Zeytin güvesine karşı biyoteknolojik mücadele yapılır.</p>
+        <p>Aşılama ve çöğürlerde şaşırtma işlemleri devam eder.</p>
+
+        <h2>HUBUBAT</h2>
+        <p>Tahıllarda azotlu gübrenin yarısı nitrat formunda verilir.</p>
+        <p>Yabani yulaf, yabancı ot ve ekin güvesine karşı mücadele yapılır.</p>
+        <p>I. Ürün Mısır: Mısır ekilecek sahalarda tarla hazırlığı yapılır. Taban gübrelemesi yapılır. Havalar uygun giderse Mısır ekimine başlanır.</p>
+
+        <h2>ÇAYIR-MERA VE YEM BİTKİLERİ</h2>
+        <p>Ekilen tek yıllık yem bitkilerinin hasadı yapılır.</p>
+        <p>Silajlık mısır ekimi yapılır.</p>
+        <p>Sorgum Sudan otu ekimi yapılır.</p>
+
+        <h2>TURUNÇGİL</h2>
+        <p>İlk azotlu gübre uygulaması bu ayın başında tamamlanmalıdır.</p>
+        <p>Fare ve diğer kemirgenlerle mücadele yapılır.</p>
+        <p>Salyangozlara karşı mücadeleye devam edilir.</p>
+        <p>Bahçede gençleştirme amacıyla ya da herhangi bir nedenle sökülen ağaçların yerine dikim yapılır.</p>
+        <p>Sulama yalakları ve arkları hazırlanır. Kış yağmurları toprak(altını ıslatacak ölçüde değilse, bu ay içinde sulama gerekebilir. Sulama gerekiyorsa suyun çok az verilmesi gerektiği unutulmamalıdır.</p>
+        <p>Hava yalakları açılır; hava yalağına, açığa çıkan kalın köklere, ağaç gövdelerine ve kalın dallara % 1'lik Bordo Bulamacı sürülür veya püskürtülür.</p>
+        <p>Çiçeklenme öncesi yaprak analiz sonuçlarına göre yapraktan BGD, Zn ve B ile Ca uygulamaları</p>
+        <

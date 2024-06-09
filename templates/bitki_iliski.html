@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitki Uyumluluğu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/bitki.css">
+</head>
+
+<body>
+    <ul class="menu">
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+    
+    <section>
+
+        <div class="header-images">
+            
+            <img src="static/resimler/img5.jpg" alt="Bitki Danışmanı" class="header-image">
+            
+        </div>
+        
+        <form method="POST" action="/bitki_iliski">
+            <label for="bitki">Bitki Seçiniz</label>
+            <select id="bitki" name="bitki">
+                {% for bitki in bitki_secenekleri %}
+                <option value="{{ bitki }}" {% if bitki == selected_bitki %}selected{% endif %}>{{ bitki }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="ara_baglanti">Uyum Tercihiniz</label>
+            <select id="ara_baglanti" name="ara_baglanti">
+                {% for ara_baglanti in ara_baglanti_secenekleri %}
+                <option value="{{ ara_baglanti }}" {% if ara_baglanti == selected_ara_baglanti %}selected{% endif %}>{{ ara_baglanti }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <button type="submit">Gönder</button>
+        </form>
+        
+        <div class="dogadaki-dayanisma">
+            <p>
+                Doğadaki Dayanışma: Kardeş Bitkiler<br>
+                Doğal dengeler gözetildiği için kardeş bitkiler yöntemi kullanılan alanlarda biyoçeşitlilik artıyor. Toprağın organik, canlı yapısı korunurken, hastalıklara ve zararlılara karşı da doğal bir mücadele yöntemi kullanılmış oluyor, bu da zehirli kimyasallar ve yapay gübre kullanımını ortadan kaldırıyor.<br>
+                Su ihtiyacı: Eğer yan yana dikmeyi düşündüğünüz her şey sudan hoşlanıyorsa veya hepsi kuraklığa dayanıklıysa sorun yok ama ikisini karıştırırsanız sulama sizin için önemli bir soruna dönüşebilir.<br>
+                Bitki kökleri: Kök sistemleri, bitkilerin rekabet etmeyeceği şekilde yerleştirmek gerekli. Mesela yayılıcı bir kökü olan domates ile kök bitkisi olan havuç iyi anlaşır. Fesleğen de bu birlikteliğe çok yakışır.<br>
+                Bitki düzenlemesi: Farklı boyutlarda ve şekillerdeki bitkileri bir araya getirerek, yakın oldukları zaman nasıl çalışabileceklerini düşünün. Mesela o köşeye diktiğiniz asma ne kadar büyüyecek? Nereye yayılacak, neleri gölgede bırakacak? Ufak bir tüyo, asma altında marul gibi gölge isteyen yeşillikler güzel yetişir.<br>
+                Böceklere karşı cazibesi: Yararlı böcekleri çekmek ve zararlıları caydırmak için kullanılan bitkilerin birlikte olması iyi olur. Örneğin, uğur böceği her zaman bahçenize görmek istediğiniz bir böcek, onu nasıl davet edebilirsiniz? Ayçiçeği bahçenizden eksik olmasın.<br>
+                Toprak: Toprağın kalitesini arttırmak her zaman besin değeri yüksek ve lezzetli ürün almanızı sağlar. O yüzden toprağın üzerini örtmek, yani malçlamak önemli. Biçip bırakabileceğiniz bir türü zemin örtücü olarak kullanabilirsiniz. Bunun yanı sıra, toprağın besin değerini arttırmak için de azot bağlayan bitkileri tercih edebilirsiniz.<br>
+            </p>
+        </div>
+        
+
+    </section>
+
+        {% if sonuclar %}
+        <div class="sonuclar">
+            <h3>Sonuçlar:</h3>
+            <ul>
+                {% for sonuc in sonuclar %}
+                <li>{{ sonuc }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% else %}
+        <div class="sonuclar">
+            <h3>Sonuçlar:</h3>
+            <p>Veri Bulunamadı</p>
+        </div>
+        
+        {% endif %}
+    
+
+    <footer>
+        <p>Telif Hakkı © 2024 Bitki Danışmanı</p>
+    </footer>
+</body>
+</html>

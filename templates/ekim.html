@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+    <div>
+        <h1>Ekim Ayı Takvimi</h1>
+        <h2>SEBZECİLİK</h2>
+        <p>Sebzecilik: Hasadı biten tarlalarda bitki artıkları temizlenip yakılır. Toprak bol çiftlik gübresi ile gübrelenir. Ve sürülür. Kışlık sebzelerin hasadına devam edilir (Ispanak, Pırasa,Lahana). Bakla,ıspanak ve enginar ekimi yapılır.</p>
+
+        <h2>MEYVECİLİK</h2>
+        <p>Toprak işleme, ekim- dikim hazırlığı yapılır.</p>
+        <p>Fidan sökümü, hendekleme, dağıtımı yapılır.</p>
+        <p>Zeytin, bağ, sert ve yumuşak meyve türlerinde zararlı etmenler takip edilir.</p>
+        <p>İklim ve türe özgü  analize dayalı gübreleme yapılır.</p>
+
+        <h2>HUBUBAT</h2>
+        <p>Hububat: Tahıl ekimi yapılacak tarlaların tüm ekim hazırlıkları tamamlanır. Bazı kesimlerde ekim yapılabilir. Hasadı tamamlanan tarlalar buğday ekimi için işlenir. Ekin kurdu ve hububat hortumlu böceğine karşı mücadele yapılır.</p>
+        <p>II. Ürün Mısır: Hasada, kurutma işlerine başlanır.</p>
+
+        <h2>ÇAYIR-MERA VE YEM BİTKİLERİ</h2>
+        <p>15 Ekimde Ceyhan, Çukurova, İmamoğlu, Karataş, Sarıçam, Seyhan, Yumurtalık, Yüreğir ilçelerinde çayır ve meralarda otlatma başlar.</p>
+        <p>15 Ekimde Aladağ, Feke, Pozantı, Saimbeyli ve Tufanbeyli İlçelerinde otlatma biter.</p>
+        <p>Tek yıllık yem bitkilerinin (adi fiğ, iskenderiye üçgülü, yem şalgamı, tek yıllık çim, tritikale) saf veya karışım olarak ekimi yapılır.</p>
+        <p>Yonca ekimi için toprak hazırlığı yapılır.</p>
+
+        <h2>TURUNÇGİL</h2>
+        <p>Zararlıların (Koşniller, Akdeniz Meyve Sineği, Yaprak Biti, Yaprak Piresi, Fare ve Diğer Kemirgenler] mücadelesi yapılır.</p>
+        <p>Virüs ve virüs benzeri hastalıkların kontrolü yaptırılır.</p>
+        <p>Bazı çeşitlerin hasadını geciktirmek amacıyla hormon uygulaması yapılır.</p>
+        <p>Etkili ve sürekli yağışlar başlamışsa, meyvelerin kahverengi çürüklük hastalığına yakalanmasını önlemek amacıyla yerden 1-1,5 m yüksekliğe kadar olan etek dallara % 1’lik Bordo Bulamacı veya bu patojene etkili hazır preparatlardan biri uygulanır.</p>
+        <p>Soğuk ve dondan korunma aygıtları bahçeye yerleştirilir.</p>
+        <p>Minneola Tanjelo'nun Alternaria hastalığı gözlemleri ve mücadelesi yapılır.</p>
+    </div>
+</body>
+</html>

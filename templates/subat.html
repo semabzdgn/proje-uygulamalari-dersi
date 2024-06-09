@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+
+    <div>
+        <h1>Şubat Ayı Takvimi</h1>
+        <h2>SEBZECİLİK</h2>
+        <p>Patates: Üst gübreleme ve boğaz doldurma işlemlerine devam edilir. Dikim yapılmamış tarlalarda toprak işlemeleri yapılır.</p>
+        <p>Sebzecilik: Kışlık sebzelerin hasadına devam edilir. Marul fideleri tarlaya şaşırtılır. Toprak çiftlik gübresi ile gübrelenerek sürüm başlar.</p>
+        <p>Seracılık: Turfanda sebzecilik için daha önce kasalara ekilen domates, biber, kabak, patlıcan fideleri ile karpuz, hıyar tohumları 10x10 cm ebattaki naylon torbalara dikilir. Bu arada tünellerin hazırlığı devam eder. Taban gübresi uygulanır. Kargı ve tel çubuklar yerlerine dikilir. Çökerten hastalığına karşı mücadele yapılır.</p>
+
+        <h2>MEYVECİLİK</h2>
+        <p>Toprak işleme, ekim- dikim hazırlığı yapılır.</p>
+        <p>Fidan sökümü, hendekleme, dağıtımı yapılır.</p>
+        <p>Kültürel işlemler ve gerekli olan bahçelerde kış mücadelesi yapılır.</p>
+        <p>İklim ve türe özgü analize dayalı gübreleme ve budama işlemleri yapılır.</p>
+
+        <h2>HUBUBAT</h2>
+        <p>Hububat: Buğdaylarda üst gübrelemeye devam edilir. Bu ay içerisinde tamamlanır. Yabani yulaf, yabancı ot, ekin güvesi mücadelesi yapılır.</p>
+        <p>I. Ürün Mısır: I. Ürün mısırın tohum ve gübresi temin edilir.</p>
+        <h2>ÇAYIR-MERA VE YEM BİTKİLERİ</h2>
+        <p>Silajlık mısır ve sorgum sudan otu ekimi için toprak hazırlığı yapılır.</p>
+        <p>Meralarda azotlu gübre uygulaması yapılır.</p>
+
+        <h2>TURUNÇGİL</h2>
+        <p>Bahçede zararlı tespit çalışmaları yapılır; gerekirse hasattan sonra ilaçlanır.</p>
+        <p>Fare ve diğer kemirgenlerle mücadele yapılır.</p>
+        <p>Salyangozlara karşı mücadele yapılır.</p>
+        <p>Ağaçlarda gerekli budama yapılır.</p>
+        <p>Soğuk ve dondan zarar görmüş ağaçlarda budama yapılmaz. Bu tip ağaçların budanması için geriye doğru kuruma zararının durması beklenir.</p>
+        <p>Budamadan sonra Uçkurutan, Turunçgil dal yanıklığı, Antraknoz ve Kahverengi meyve çürüğüne karşı ilaçlama yapılır.</p>
+        <p>Hasada devam edilir.</p>
+        <p>Ekim ayında yapılan yaprak analiz bildirişlerine göre ilk azotlu gübre uygulaması yapılır.</p>
+        <p>Sulama motopompunun bakımı yapılır.</p>
+        <p>Çeşit değiştirilecek ağaçlar işaretlenir.</p>
+        <p>Ağaç seyreltmesi yapılır.</p>
+        <p>Rüzgarkıran tesisi yapılabilir.</p>
+        <p>Fosforlu ve potaslı gübrelerin uygulanması sürdürülebilir.</p>
+        <p>Alet-Ekipman bakımı</p>
+    </div>
+</body>
+</html>

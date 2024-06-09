@@ -1,0 +1,26 @@
+{% extends "taslak.html" %}
+
+{% block baslik %}
+Kullanıcı Girişi
+{% endblock %}
+
+{% block icerik %}
+<div class="login-container">
+    <h2>Giriş Yap</h2>
+    <form action="/loginbilgileri" method="POST">
+        <div class="form-group">
+            <label for="isim">Kullanıcı Adı:</label>
+            <input type="text" id="isim" name="isim" required>
+        </div>
+        <div class="form-group">
+            <label for="sifre">Şifre:</label>
+            <input type="password" id="sifre" name="sifre" required>
+        </div>
+        {% if hata %}
+        <p class="error">{{ hata }}</p>
+        {% endif %}
+        <button type="submit">Giriş Yap</button>
+    </form>
+    <p>Hesabınız yok mu? <a href="/kaydol">Kaydolun</a></p>
+</div>
+{% endblock %}

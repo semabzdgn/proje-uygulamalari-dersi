@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nisan Ayı Tarım Takvimi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+
+    <div>
+        <h1>Nisan Ayı Takvimi</h1>
+        <h2>SEBZECİLİK</h2>
+        <p>Patates: Patates böceği ve mildiyöye karşı mücadele yapılır. Yağışın yeterli olmadığı yerlerde gübrelemeyle, beraber sulama yapılır.</p>
+        <p>Sebzecilik: Mart ayında hazırlanan toprağa domates, biber patlıcan, karpuz salatalık fideleri dikilir. Sulama ve çapa yapılır. Yeşil soğan, marul, bezelye, bakla hasadına devam edilir. Toprak altı zararlıları, sebze ve bostanlarda yaprak biti, kırmızı örümcek, soğan mildiyösü, bostanlarda külleme, antraknoz, yalancı mildiyöye karşı ilaçlama yapılır.</p>
+
+        <h2>SERACILIK</h2>
+        <p>Örtü altında yetiştirilen kabak, biber hasadı devam eder. Tüneller üzerindeki naylon örtüler kaldırılır. Son azot gübresi verilir. Çapalama, sulama ve diğer bakım işlemleri devam eder, toprakaltı zararlıları sebze ve bostanlarda yaprak biti, kırmızı örümcek, külleme, yalancı mildiyö ve antraknoza karşı mücadele yapılır.</p>
+
+        <h2>MEYVECİLİK</h2>
+        <p>Zeytin bahçelerinde zeytin güvesine karşı tuzaklar kontrol edilir.</p>
+        <p>Aşılama ve çöğürlerde şaşırtma işlemleri tamamlanır.</p>
+        <p>Zeytin, bağ, sert ve yumuşak meyve türlerinde zararlı etmenler takip edilir.</p>
+        <p>Yeşil gübreleme zamanı takip edilerek uygulanabilir.</p>
+
+        <h2>HUBUBAT</h2>
+        <p>Hububatta azotlu gübreleme tatbikatı tamamlanır. Mevsimin yağış durumuna göre gerektiğinde sulama yapılmalıdır. Yabani yulaf, yabancı ot ve ekin güvesi ile mücadele edilmelidir. Külleme, Pas, Septorya hastalığına karşı mücadele yapılır.</p>
+        <p>Mısır: Ekime devam edilir. Bozkurt mücadelesi yapılır.</p>
+
+        <h2>ÇAYIR-MERA VE YEM BİTKİLERİ</h2>
+        <p>1 Nisanda Ceyhan, Çukurova, İmamoğlu, Karataş, Sarıçam, Seyhan, Yumurtalık, Yüreğir ilçelerinde çayır ve meralarda otlatma mevsimi başlar. 15 Nisan tarihinde Karaisalı ve Kozan ilçelerinde çayır ve meralarda otlatma mevsimi başlar.</p>
+        <p>Ekilen tek yıllık yem bitkilerinin hasadı yapılır.</p>
+        <p>Silajlık mısır ekimi yapılır.</p>
+        <p>Sorgum Sudan otu ekimi yapılır.</p>
+        <p>Bir yıl önce ekilen yoncada ilkbahar temizliği amacıyla ot hasadı yapılır.</p>
+
+        <h2>TURUNÇGİL</h2>
+        <p>Bu ay içerisindeki yetersiz toprak nemi ürün miktarını düşürebilir. Bu nedenle toprak nemi kontrol edilmeli, gerekiyorsa sulamaya başlanmalıdır.</p>
+        <p>Tomurcuk akarı ve Kırmızı Örümcek kontrolü ve mücadelesi yapılır.</p>
+        <p>Yaprak biti (Afit, Püseron) mücadelesi yapılır.</p>
+        <p>Mineola tanjelo ve diğer hassas çeşitlerde (Nova, Fortune vb.) Alternaria mücadelesi.</p>
+        <p>Fare ve diğer kemirgenlerle mücadele yap

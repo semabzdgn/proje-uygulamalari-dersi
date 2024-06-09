@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+    <div>
+        <h1>Temmuz Ayı Takvimi</h1>
+        <h2>SEBZECİLİK</h2>
+        <p>Sebzecilik: Sebze hasadına devam edilir. Pırasa, karnabahar, lahana fideleri hazırlanan yerlere dikilmelidir. Toprak altı zararlıları, sebze ve bostanlarda beyaz sinek, yaprak biti, kırmızı örümcek, yeşilkurt, soğan mildiyösü, külleme, bostanlarda antraknoz ve domates mildiyösü mücadelesi yapılır.</p>
+        <p>Seracılık: Hasada devam edilir.</p>
+
+        <h2>MEYVECİLİK</h2>
+        <p>Zeytin, bağ, sert ve yumuşak meyve türlerinde zararlı etmenler takip edilir.</p>
+        <p>Sürgün göz aşılama başlatılabilir.</p>
+        <p>Sulama işleri devam eder.</p>
+        <p>Bazı meyvelerde derime devam edilir.</p>
+        <p>Meyveler ambalajlanıp pazara hazırlanır.</p>
+
+        <h2>HUBUBAT</h2>
+        <p>Hububat: Hububat anız yerleri bozulur. Sulamayı takiben ayın ilk günlerinden itibaren diğer 2.ürün bitkileri için tarla hazırlanıp, tohum gübre temini yapılır.</p>
+        <p>II. Ürün Mısır: 2. ürün mısır ekimi gecikilen yerlerde ekime devam edilir. Erken ekim yapılan yerlerde bitkinin durumuna göre; I ve II. sulamalar, ara çapası, boğaz doldurma işlemleri yapılır. Koçan kurdu, mısır kurduna karşı ilaçlanır. Mısır Yaprak yanıklığına karşı mücadele yapılır. Yabancı ot kontrolü yapılır.</p>
+
+        <h2>ÇAYIR-MERA VE YEM BİTKİLERİ</h2>
+        <p>15 Temmuzda Ceyhan, Çukurova, İmamoğlu, Karataş, Sarıçam, Seyhan, Yumurtalık, Yüreğir, Karaisalı ve Kozan ilçelerinde çayır ve meralarda otlatma mevsimi biter.</p>
+        <p>1. Ürün Silajlık mısır ve Sorgum Sudan otu hasadı yapılır.</p>
+
+        <h2>TURUNÇGİL</h2>
+        <p>Sulamaya devam edilir.</p>
+        <p>Kimyasal metotla ot mücadelesine devam edilir.</p>
+        <p>Zararlı mücadelesine devam edilir.</p>
+        <p>Gövdenin güneş zararından, kireç badanası tatbik ederek ya da kağıt sararak korunmasına devam edilir.</p>
+        <p>Gövde ve dallardaki yosun ve liken oluşumlarına %1 'lik Bordo Bulamacı sürülür yada püskürtülür.</p>
+        <p>Hava yalakları açılmamışsa açılır, çeşitli nedenlerle bozulan hava yalakları tamir edilir.</p>
+        <p>Kuru dal budamasına devam edilir.</p>
+        <p>Yere dökülen meyvelerde taşlaşma (Impietretura) virüs hastalığı aranır.</p>
+        <p>Minneola Tanjelolorda Alternaria hastalığı mücadelesi yapılır.</p>
+    </div>
+</body>
+</html>

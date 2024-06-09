@@ -1,0 +1,165 @@
+span.hosgeldiniz {
+    font-size: 40px; 
+    font-weight: bold; 
+    color: rgb(60, 210, 30);
+    margin-right: 250px;
+}
+
+.menu li:first-child {
+    margin-right: 100px; /* Anasayfa ile "Hoş Geldiniz!" arasındaki boşluğu ayarlar */
+}
+
+ul {
+    background-color: #161616;
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+ul li {
+    display: inline-block;
+    width: 150px;
+    padding: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
+    height: 100px;
+    margin-top: 2px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    display: flex; /* Ana liste öğelerini yan yana hizalar */
+}
+
+ul li a:hover {
+    color: rgb(60, 210, 30);
+    transition: 0.5s;
+}
+
+i {
+    padding-right: 10px;
+}
+
+.header-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-images {
+    justify-content: center;
+}
+
+.header-image {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    margin-right: 15px; /* Add this line */
+}
+
+.header-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-top: 10px; /* Add this line */
+    width: 500px;
+    display: block;
+    text-align: center;
+}
+
+.header-p {
+    font-size: 30px;
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+    margin-top: 10px; /* Add this line */
+    width: 500px;
+    display: block;
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Yeşil arkaplan */
+    border: none; /* Kenarlık olmadan */
+    color: white; /* Beyaz metin */
+    padding: 15px 32px; /* Düğme boyutu */
+    text-align: center; /* Metni ortala */
+    text-decoration: none; /* Metin altını çizme */
+    display: inline-block; /* Blok ögelerin yan yana gelmesini sağlar */
+    font-size: 40px; /* Yazı tipi boyutu */
+    margin: 4px 2px; /* Düğmeler arasında boşluk */
+    cursor: pointer; /* Farenin üzerine gelince el işareti */
+    border-radius: 12px; /* Köşeleri yuvarla */
+}
+
+/* Butona tıklanınca stilini değiştir */
+button[type="submit"]:hover {
+    background-color: #45a049; /* Koyu yeşil */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Etiketler arasında biraz boşluk bırakır */
+    font-size: 30px;
+}
+
+select {
+    padding: 30px;
+    border: 3px solid #ccc; /* Gri kenarlık */
+    border-radius: 8px; /* Köşeleri yumuşatır */
+    margin-bottom: 20px; /* Seçenekler arasında boşluk bırakır */
+    font-size: 25px; /* Seçenekler yazı tipi boyutunu büyütür */
+    width: 300px;
+}
+
+.dogadaki-dayanisma {
+    margin-left: 20px; /* Doğadaki Dayanışma bölümü ile diğer içerikler arasına 20 piksel boşluk ekler */
+}
+
+.sonuclar {
+    height: auto; /* İstediğiniz yüksekliği burada belirleyebilirsiniz */
+    width: auto;
+    color: rgb(0, 0, 0); 
+}
+
+.sonuclar ul {
+    background-color: #4CAF50; /* Arka plan rengi */
+    border-radius: 5px; /* Kenar yumuşatma */
+    width: auto;
+    padding: 10px; /* İçerik ile kenarlar arasında boşluk */
+}
+
+.sonuclar li {
+    margin: 2px 0; /* Madde aralarındaki boşluk (üst ve alt) */
+    color: #000000; /* Madde metin rengi */
+    padding: 10px; /* İçerik ile kenarlar arasında boşluk */
+    width: 20%; /* Liste öğesinin genişliği */
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+body { 
+    font-family: 'Nunito Sans', sans-serif; 
+} 
+
+.ara_baglanti { 
+    margin-top: 20px; 
+} 
+
+.kapsayici { 
+    width: 960px; 
+    margin: 0 auto; 
+}

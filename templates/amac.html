@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projenin Amacı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+</head>
+<body>
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+    
+
+    
+    <div class="header-images">
+        
+        <section>
+            <h1 >Projenin Amacı</h1>
+            <p>Projenin amacı, çiftçilere ve bahçe sahiplerine bitki yetiştirme konusunda rehberlik etmektir. Bitki Danışmanı adı verilen bu uygulama, kullanıcılara bitki uyumluluğu, gerekli sulama miktarı, uygun ekim zamanı gibi konularda bilgi sağlar.
+
+                Bitki Danışmanı, kullanıcıların belirli bir bitki türünün diğer bitkilerle uyumlu olup olmadığını kontrol etmelerine olanak tanır. Aynı zamanda, belirli bir bölgedeki iklim koşullarına ve toprak yapısına göre en uygun bitkileri önerir. Bu sayede, çiftçiler ve bahçe sahipleri doğru bitki seçimleri yaparak verimliliği artırabilir ve kaynakları daha etkili bir şekilde kullanabilir.
+                
+                Ayrıca, Bitki Danışmanı sulama miktarını da hesaplar. Belirli bir bitki türünün ihtiyaç duyduğu su miktarını, bulunduğu bölgenin yağış miktarı ve toprak tipi gibi faktörlere dayanarak belirler. Bu sayede, kullanıcılar bitkilerini doğru şekilde sulayarak su kaynaklarını daha verimli kullanabilirler.
+                
+                Son olarak, Bitki Danışmanı uygun ekim zamanını belirlemede yardımcı olur. Her bitki türünün farklı ekim zamanları vardır ve Bitki Danışmanı, kullanıcılara belirli bir bitki için en uygun ekim zamanını önerir. Böylece, kullanıcılar bitkilerini en iyi şekilde büyütmek için doğru zamanda ekim yapabilirler.
+                
+                Bitki Danışmanı, çiftçilerin ve bahçe sahiplerinin bitki yetiştirme sürecini optimize etmelerine yardımcı olmak için tasarlanmıştır. Doğru bitki seçimi, sulama miktarı ve ekim zamanı, verimliliği artırabilir ve kaynak kullanımını optimize edebilir, böylece daha sürdürülebilir bir tarım ve bahçecilik uygulanabilir.</p>
+                
+        </section>
+        <div class="header-image-container">
+            <img src="static/resimler/img6.webp" alt="Bitki Danışmanı" class="header-image">
+            <img src="static/resimler/img4.jpg" alt="Bitki Danışmanı" class="header-image">
+            
+        </div>
+    </div>
+
+    
+</body>
+</html>

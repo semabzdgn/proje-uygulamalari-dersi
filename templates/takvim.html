@@ -1,0 +1,96 @@
+{% extends "taslak.html" %}
+
+{% block baslik %}
+Ekim Zamanı
+{% endblock %}
+
+{% block icerik %}
+
+    <h1>Aylara Göre Ekim Zamanı</h1>
+    <style>
+        .aylar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Ay bloklarını eşit aralıklarla hizalar */
+        }
+
+        .ay {
+            margin-bottom: 20px;
+            text-align: center; /* Ay bloğunu ortalar */
+        }
+
+        .ay a {
+            text-decoration: none;
+            color: #333; /* Yazı rengi */
+            font-weight: bold;
+            font-size: 35px;
+            display: block;
+        }
+
+        .ay a:hover {
+            color: #007bff; /* Fare üzerine gelindiğinde yazı rengi */
+        }
+
+        .ay img {
+            width: 145px; /* Resim genişliği */
+            height: 145px; /* Resim yüksekliği */
+            margin-top: 5px; /* Ay ismi ile resim arasındaki boşluk */
+            border: 5px solid rgb(29, 240, 29); /* Siyah çerçeve */
+            padding: 5px; /* Çerçeve ile resim arasındaki boşluk */
+            border-radius: 10px; /* Kenar yumuşatma */
+        }
+    </style>
+
+    
+    <div class="aylar">
+        <div class="ay">
+            <a href="/ocak">Ocak</a>
+            <img src="/static/resimler/ocak.webp" alt="Ocak Ayı">
+        </div>
+        <div class="ay">
+            <a href="/subat">Şubat</a>
+            <img src="/static/resimler/subat.jpg" alt="Şubat Ayı">
+        </div>
+        <div class="ay">
+            <a href="/mart">Mart</a>
+            <img src="/static/resimler/mart.jfif" alt="Mart Ayı">
+        </div>
+        <div class="ay">
+            <a href="/nisan">Nisan</a>
+            <img src="/static/resimler/nisan.jfif" alt="Nisan Ayı">
+        </div>
+        <div class="ay">
+            <a href="/mayis">Mayıs</a>
+            <img src="/static/resimler/mayis.jfif" alt="Mayıs Ayı">
+        </div>
+        <div class="ay">
+            <a href="/haziran">Haziran</a>
+            <img src="/static/resimler/haziran.jfif" alt="Haziran Ayı">
+        </div>
+        <div class="ay">
+            <a href="/temmuz">Temmuz</a>
+            <img src="/static/resimler/temmuz.jfif" alt="Temmuz Ayı">
+        </div>
+        <div class="ay">
+            <a href="/agustos">Ağustos</a>
+            <img src="/static/resimler/agustos.jfif" alt="Ağustos Ayı">
+        </div>
+        <div class="ay">
+            <a href="/eylul">Eylül</a>
+            <img src="/static/resimler/eylul.jfif" alt="Eylül Ayı">
+        </div>
+        <div class="ay">
+            <a href="/ekim">Ekim</a>
+            <img src="/static/resimler/ekim.jfif" alt="Ekim Ayı">
+        </div>
+        <div class="ay">
+            <a href="/kasim">Kasım</a>
+            <img src="/static/resimler/kasim.jfif" alt="Kasım Ayı">
+        </div>
+        <div class="ay">
+            <a href="/aralik">Aralık</a>
+            <img src="/static/resimler/aralik.jfif" alt="Aralık Ayı">
+        </div>
+    </div>
+
+{% endblock %}

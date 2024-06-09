@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+
+    
+    <div class="header-images"> <!-- Add class to the parent div -->
+        <div class="header-image-container">
+            <img src="static/resimler/img1.jpg" alt="Bitki Danışmanı" class="header-image">
+            <span class="header-title">Tarımda Enerji Verimliliği Çalışmaları için 600 Milyon Dolar Harcanacak</span> <!-- Add this line -->
+            <p class="header-p">Enerji ve Tabii Kaynaklar Bakanlığı’nın X sosyal medya hesabından yapılan paylaşımda, 2024-2030 yılları arasında tarım sektöründeki enerji verimliliği çalışmaları hakkında bilgi paylaşıldı ve  “II. Ulusal Enerji Verimliliği Eylem Planı ile tarımsal faaliyetlerin etkin, verimli ve sürdürülebilir bir şekilde hayata geçirilmesine destek olacağız” ifadesi kullanıldı.</p>
+        </div>
+        <div class="header-image-container">
+            <img src="static/resimler/img2.jpeg" alt="Bitki Danışmanı" class="header-image">
+            <span class="header-title">“Türkiye Yüzyılına BİR DAMLA da Sen Ol!”</span> <!-- Add this line -->
+            <p class="header-p">Su Verimliliği konusunda ulusal ölçekte harekete geçilmesi ve acil önlemler alınması hususu 1. Su Şurası sonuçlarında da öncelikli konu olarak ortaya koyulmuştur. Bununla bağlantılı olarak Değişen İklime Uyum Çerçevesinde Su Verimliliği Strateji Belgesi ve Eylem Planı belgesi hazırlanmıştır.</p>
+        </div>
+        <div class="header-image-container">
+            <img src="static/resimler/img3.jpg" alt="Bitki Danışmanı" class="header-image">
+            <span class="header-title">Organik Tarım Yaygınlaşıyor</span> <!-- Add this line -->
+            <p class="header-p">Tarımsal Hizmetler Dairesi Başkanlığı’nın 2021 yılında başlattığı ‘Organik Tarım Eğitimi ve Organik Gübre Dağıtımı’ projesiyle üreticiler hem organik tarım hakkında bilgi sahibi oluyor, hem de tarlalarında endüstriyel ham madde kullanımının önüne geçerek doğa dostu üretimin yaygınlaştırılmasına katkı sağlıyor.</p>
+        </div>
+    </div> 
+</body>
+</html>

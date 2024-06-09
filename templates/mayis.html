@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <ul>
+        <li><span class="hosgeldiniz">Verimli Tarım Rehberi</span></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i>Anasayfa</a></li>
+        <li><a href="/amac"><i class="fa-solid fa-address-card"></i>Hakkında</a></li>
+        <li><a href="/bitki_iliski"><i class="fa-solid fa-wheat-awn"></i>Uyumluluk</a></li>
+        <li><a href="/profil"><i class="fa-solid fa-cloud-showers-water"></i>Profil</a></li>
+        <li><a href="/takvim"><i class="fa-regular fa-calendar-days"></i>Ekim Zamanı</a></li>
+        {% if logged_in %}
+        <li><a href="/cikis"><i class="fa-solid fa-sign-out-alt"></i>Çıkış</a></li>
+        {% else %}
+        <li><a href="/login"><i class="fa-solid fa-sign-in-alt"></i>Giriş Yap</a></li>
+        {% endif %}
+    </ul>
+    <div>
+        <h1>Mayıs Ayı Takvimi</h1>
+        <h2>SEBZECİLİK</h2>
+        <p>Patates: Turfanda patates hasadı bu ay içerisinde tamamlanır.</p>
+        <p>Sebzecilik: Açık tarla sebzeciliğinde hasada başlanır. Diğer bakım işlerine devam edilir. Kışlık sebzelerin soğuk yastıklara dikimi yapılır. Sebzelerde toprak altı zararlıları, sebze ve bostanda yaprak biti, kırmızı örümcek, külleme soğan mildiyösü, sebzelerde külleme, bostanlarda antraknoz, yalancı mildiyö, domates mildiyösü, sebzelerde tohum ilaçlaması yapılır.</p>
+        <p>Seracılık: Sebze hasadına devam edilir. Hasadı biten yerlerde tekrar toprak hazırlığına başlanır. Mücadeleye devam edilir.</p>
+
+        <h2>MEYVECİLİK</h2>
+        <p>Analize dayalı olarak gübrelemelerin 2. partileri uygulanabilir.</p>
+        <p>Sulama ve yabancı otlarla mekanik mücadele başlatılabilir.</p>
+        <p>Zeytin, bağ, sert ve yumuşak meyve türlerinde zararlı etmenler takip edilir.</p>
+
+        <h2>HUBUBAT</h2>
+        <p>Tahıllarda ekin güvesi, ekin bambulu ile bu ayda mücadele yapılmalıdır. Mayısın 2. yarısından itibaren kıraç bölgelerde arpa ve erken ekilen buğdayların hasadına başlanır. 1. Ürün Mısır: Ara sürüm işlemi ile boğaz doldurma yapılırken, suyun önüne azotlu gübre uygulanmalıdır.</p>
+
+        <h2>ÇAYIR-MERA VE YEM BİTKİLERİ</h2>
+        <p>Sonbaharda tesis edilen yoncalarda ilk hasat işlemi yapılır.</p>
+        <p>Buğday hasadından sonra toprak hazırlığı yapılır.</p>
+
+        <h2>TURUNÇGİL</h2>
+        <p>Gerekiyorsa, ağaçların istediği miktarda sulama yapılır.</p>
+        <p>Azotlu gübrenin ikinci kısmının tatbikatına başlanır.</p>
+        <p>Noksanlığı görülüyorsa mikro element tatbikatı (Mn, Zn, Fe, Mg vb.) yapılır.</p>
+        <p>Zararlı (tomurcuk akarı, kırmızı örümcek, çiçek güvesi, pas böcüsü) mücadelesi yapılır.</p>
+        <p>Bu ayın sonuna doğru gerekiyorsa koşnillere karşı mücadele yapılır.</p>
+        <p>Yaprak biti (Afit-Püseron) mücadelesi yapılır.</p>
+        <p>Yabancı Ot mücadelesi için sürüm veya herbisit uygulamaları</p>
+        <p>Hava yalaklarının açımı ve % 1’lik Bordo Bulamacı uygulamasına devam edilir.</p>
+    </div>
+</body>
+</html>
